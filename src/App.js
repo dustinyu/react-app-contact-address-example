@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contact from './Contact';
+import ContactListContainer from './ContactListContainer';
 import './App.css';
 
 class App extends Component {
@@ -9,34 +9,32 @@ class App extends Component {
   }
 
   render() {
-    const mockAddresses = [
+    const mockContacts = [
       {
-        line1: '16 The Harbor',
-        town: 'Newport',
-        county: 'Gwent',
-        country: 'Wales'
+        name: "Peter Munro",
+        address: {
+          line1: '16 The Harbor',
+          town: 'Newport',
+          county: 'Gwent',
+          country: 'Wales'
+        },
+        email: "peter@petermunro.org",
       },
       {
-        line1: '5 The Villas',
-        town: 'Stourbridge',
-        county: 'Devon',
-        country: 'England'
+        name: "Dave Mallon",
+        address: {
+          line1: '5 The Villas',
+          town: 'Stourbridge',
+          county: 'Devon',
+          country: 'England'
+        },
+        email: "dave@example.com",
       }
     ];
 
     return (
       <div className="App">
-        <Contact
-          name="Peter Munro"
-          address={mockAddresses[0]}
-          email="peter@petermunro.org"
-          handleExpanded={this.tellMeWhenExpandedIsHit}
-        />
-        <Contact
-          name="Dave Mallon"
-          address={mockAddresses[1]}
-          email="dave@example.com"
-        />
+        <ContactListContainer contacts={mockContacts} />
       </div>
     );
   }
