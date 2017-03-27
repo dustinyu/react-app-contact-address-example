@@ -3,13 +3,11 @@ import Contact from './Contact';
 
 class ContactList extends Component {
   render() {
-    const contacts = this.props.contacts;
+    const contacts = this.props.contacts || [];
     const contactComponents = contacts.map(contact => (
       <Contact
+        {...contact}
         key={contact.id}
-        name={contact.name}
-        address={contact.address}
-        email={contact.email}
       />
     ));
     return (
