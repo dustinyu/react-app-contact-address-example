@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Address extends Component {
-  render() {
-    return (
-      <div>
-        <p>{this.props.address.line1}</p>
-        <p>{this.props.address.town}</p>
-        <p>{this.props.address.county}</p>
-        <p>{this.props.address.country}</p>
-      </div>
-    );
-  }
-}
+const Address = (props) => (
+  <div>
+    <p>{props.address.line1}</p>
+    <p>{props.address.town}</p>
+    <p>{props.address.county}</p>
+    <p>{props.address.country}</p>
+  </div>
+);
 
 Address.propTypes = {
   address: React.PropTypes.shape({
