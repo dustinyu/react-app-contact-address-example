@@ -11,12 +11,21 @@ class ContactListContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8060/api/contacts')
+    const timerId = setTimeout(() => {
+      this.setState({error: 'Request timed out'});
+    }, 2000);
+
+    function always() {
+      clearTimeout(timerId);
+    }
+
+    this.setState({ error: 'Loading...' });
+
+    fetch('http://localhost:8060/api/contacts-delay')
       .then(response => response.json())
-      .then(json => this.setState({contacts: json}))
-      .catch(ex => {
-        this.setState({ error: ex.message })
-      });
+      .then(json => this.setState({contacts: json, error: null}))
+      .catch(ex => this.setState({ error: ex.message }))
+      .then(always, always);
   }
 
   render() {
