@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "name": "John Andrews",
+    "address": {
+        "line1": "6 Highcross Road",
+        "town": "Upper Norton",
+        "county": "Northshire",
+        "country": "England"
+    },
+    "email": "john@example.com"
+}

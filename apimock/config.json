@@ -11,6 +11,11 @@
       "mockFile": "contacts.json",
       "verbs": ["get"],
       "latency": 1500
+    },
+    "api/contact/:id": {
+      "mockFile": "contact.json",
+      "verbs": ["get"],
+      "switch": "id"
     }
   }
 }

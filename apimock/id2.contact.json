@@ -1,0 +1,11 @@
+{
+    "id": 2,
+    "name": "Peter Munro",
+    "address": {
+        "line1": "16 The Harbor",
+        "town": "Newport",
+        "county": "Gwent",
+        "country": "Wales"
+    },
+    "email": "peter@example.com"
+}
