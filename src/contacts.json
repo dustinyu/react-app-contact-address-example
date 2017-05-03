@@ -10,6 +10,7 @@
         "email": "john@example.com"
     },
     {
+        "id": 2,
         "name": "Peter Munro",
         "address": {
             "line1": "16 The Harbor",
@@ -20,6 +21,7 @@
         "email": "peter@example.com"
     },
     {
+        "id": 3,
         "name": "Dave Mallon",
         "address": {
             "line1": "5 The Villas",
