@@ -7,4 +7,10 @@ This example demonstrates
 - conditional rendering of child components
 - passing data up the component tree using callbacks.
 
+## To use:
+
+1. `npm install`
+2. `npm run apimock`
+3. `npm start`
+
 
